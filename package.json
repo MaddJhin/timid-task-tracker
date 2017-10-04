@@ -1,0 +1,26 @@
+{
+  "name": "timid-task-tracker",
+  "version": "1.0.0",
+  "description": "Basic task tracker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaddJhin/timid-task-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaddJhin/timid-task-tracker/issues"
+  },
+  "homepage": "https://github.com/MaddJhin/timid-task-tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.14.1"
+  }
+}
