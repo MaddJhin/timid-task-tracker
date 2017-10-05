@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    {{!-- CSS --}}
-    {{!-- <link rel="stylesheet" href="./app/css/reset"/>     --}}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {{!-- CSS --}} {{!--
+    <link rel="stylesheet" href="./app/css/reset" /> --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
 
     <title>Timid Task Tracker</title>
 </head>
+
 <body>
     <nav class="navbar sticky-top navbar-light bg-light">
         <a class="navbar-brand" href="#">Timid Task Tracker</a>
     </nav>
+
+    <div class="container mt-3">
+        <div class="jumbotron">
+            <form action="/" method="POST">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Add Task</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="New Task">
+                </div>
+            </form>
+        </div>
+    </div>
+
     {{{ body }}}
 
     <footer class="navbar fixed-bottom navbar-light bg-light justify-content-center">
@@ -22,4 +37,5 @@
     </footer>
 
 </body>
+
 </html>
