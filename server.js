@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const hdb = require("express-handlebars");
+const htmlRoutes = require('./app/routing/htmlRoutes');
 
 // App Setup
 // ======================================================
@@ -19,6 +20,7 @@ app.set("view engine", "handlebars");
 
 // Routing
 // =======================================================
+app.use('/', htmlRoutes);
 
 // Start Server
 // =======================================================
