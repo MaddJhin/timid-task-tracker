@@ -6,13 +6,19 @@ const mysql = require('mysql');
 // Setup Router
 // ====================================
 var router = express.Router();
-var connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "tasksDB"
-});
-
+var connection;
+if(process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+}
+else
+{
+    connection = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "root",
+        database: "tasksDB"
+    });
+}
 
 // Middleware
 // ====================================

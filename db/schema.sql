@@ -12,6 +12,6 @@ CREATE TABLE tasks(
 DESCRIBE tasks;
 
 INSERT INTO tasks (`task`)
-VALUES ("Complete Database Integration");
+VALUES ("Hello World"), ("Hello Back");
 
 SELECT * FROM tasks;
