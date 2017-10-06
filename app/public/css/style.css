@@ -1,0 +1,29 @@
+.task {
+    margin: 10px 0px;
+}
+
+.task-input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+/* input[type=text] {
+    background-color: #3CBC8D;
+    color: white;
+} */
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: blue;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: blue;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color: pink;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: pink;
+}

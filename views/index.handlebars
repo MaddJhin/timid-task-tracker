@@ -1,4 +1,10 @@
-<form>
-    <label for="task1">TEST</label>
-    <input type="text" id="task1" placeholder="{{tasks.task}}">
-</form>
+{{#each tasks}}
+    <div class="input-group task">
+        <input type="text" class="form-control task-input" placeholder="{{this.task}}" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="input-group-btn task-btn">
+            <button class="btn btn-secondary btn-complete" data-taskid="{{this.id}}" type="button"> OK
+                {{!-- <span class="glyphicon glyphicon-ok"></span> --}}
+            </button>
+        </span>
+    </div>
+{{/each}}

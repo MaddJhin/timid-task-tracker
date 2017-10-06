@@ -12,6 +12,7 @@ var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded( { extended: true } ));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/app/public'));
 
 // Set Handlebars as the default templating engine
 // =======================================================
