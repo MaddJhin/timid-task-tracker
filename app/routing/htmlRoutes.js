@@ -41,9 +41,17 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
     connection.query("INSERT INTO tasks (task) VALUES (?)", [req.body.task], function(error, data){
-            res.redirect('/');            
+        res.redirect('/');            
     });
 });
+
+router.post("/todo/:id", function (req, res) {
+    console.log("Updating task " + req.params.id + " with "+ req.body.task);
+    connection.query("UPDATE tasks SET task = ? WHERE id = ?", [req.body.task, req.params.id], function(error, data){
+        res.redirect('/');                    
+    });
+});
+
 
 router.delete("/todo/:id", function (req, res) {
     console.log(req.params.id);

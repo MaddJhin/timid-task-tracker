@@ -1,10 +1,16 @@
 {{#each tasks}}
+    
     <div class="input-group task">
-        <input type="text" class="form-control task-input" placeholder="{{this.task}}" aria-label="Username" aria-describedby="basic-addon1">
-        <span class="input-group-btn task-btn">
-            <button class="btn btn-secondary btn-complete" data-taskid="{{this.id}}" type="button"> OK
-                {{!-- <span class="glyphicon glyphicon-ok"></span> --}}
-            </button>
-        </span>
+        {{!-- <form action="/todo/{{this.id}}" > --}}
+            <input type="text" class="form-control task-input" data-taskid="{{this.id}}"  placeholder="{{this.task}}" >
+        {{!-- </form> --}}
+        <form>
+            <span class="input-group-btn task-btn">
+                <button class="btn btn-secondary btn-complete" data-taskid="{{this.id}}" type="submit"> OK
+                    {{!-- <span class="glyphicon glyphicon-ok"></span> --}}
+                </button>
+            </span>
+        </form>
     </div>
+
 {{/each}}
